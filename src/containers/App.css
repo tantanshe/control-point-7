@@ -4,3 +4,113 @@
   padding: 2rem;
   text-align: center;
 }
+
+body {
+  background: radial-gradient(circle, #e8c9ad, #ffffff);
+}
+
+.cafe-app {
+  max-width: fit-content;
+  margin: auto;
+}
+
+.cafe-app h1 {
+  text-transform: uppercase;
+}
+
+.cafe-app h2 {
+  color: #50403a;
+}
+
+.cafe-app-inner {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.client-order {
+  border: 2px solid #50403a;
+  padding: 20px;
+  width: 300px;
+  border-radius: 20px;
+  background-color: #ffe8d6;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.order {
+  margin-bottom: 20px;
+  width: 270px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  background-color: #ffeee0;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.order:active {
+  transform: scale(0.90);
+}
+
+.orders-panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 570px;
+  justify-content: space-between;
+}
+
+.items-panel {
+  border: 2px solid #50403a;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #e0c5b2;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+  width: 100px;
+}
+
+.image {
+  width: auto;
+  height: 70px;
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.client-order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.client-order-info {
+  display: flex;
+  gap: 20px;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.delete-btn:active {
+  transform: scale(0.70);
+}
+
+.trash-icon {
+  width: auto;
+  height: 20px;
+}

@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import {Order} from '../types';
 import ramenImage from '../assets/ramen.png';
 import kimchiImage from '../assets/kimchi.png';
@@ -71,18 +71,27 @@ const App = () => {
 
 
   return (
-    <>
-      <ClientOrderPanel
-        orders={orders}
-        onRemove={removeOrder}
-      />
-      <OrderPanel
-        orders={orders}
-        orderDetails={ORDERS}
-        onAdd={addOrder}
-      />
-    </>
-  )
+    <div className="cafe-app">
+      <h1>Korean cafe</h1>
+      <div className="cafe-app-inner">
+        <div className="client-order">
+          <h2>Your order:</h2>
+          <ClientOrderPanel
+            orders={orders}
+            onRemove={removeOrder}
+          />
+        </div>
+        <div className="items-panel">
+          <h2>Menu:</h2>
+          <OrderPanel
+            orders={orders}
+            orderDetails={ORDERS}
+            onAdd={addOrder}
+          />
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default App
+export default App;
