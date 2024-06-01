@@ -2,7 +2,7 @@ import React from 'react';
 import { Order} from '../../types';
 
 interface OrderBtn {
-  order: { name: string, price: number }
+  order: { name: string, count: number }
   orderDetails: Order[];
 }
 
@@ -16,8 +16,8 @@ const OrderBtn:React.FC<OrderBtn> = ({order, orderDetails}) => {
     <div>
       <button>
         <img src={orderDetail.image} alt={orderDetail.name} style={{width: "70px"}}/>
-        {orderDetail.name}
-        <span>{orderDetail.price}</span>
+        <span>{orderDetail.name}</span>
+        <span>Price: {orderDetail.price}</span>
       </button>
     </div>
   );
