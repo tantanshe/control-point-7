@@ -18,7 +18,7 @@ const OrderBtn:React.FC<OrderBtn> = ({order, orderDetails, onAdd}) => {
       <button onClick={onAdd}>
         <img src={orderDetail.image} alt={orderDetail.name} style={{width: "70px"}}/>
         <span>{orderDetail.name}</span>
-        <span>Price: {orderDetail.price}</span>
+        <span>Price: {orderDetail.price} KGS</span>
       </button>
     </div>
   );
