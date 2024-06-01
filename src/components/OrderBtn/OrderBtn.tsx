@@ -4,9 +4,10 @@ import { Order} from '../../types';
 interface OrderBtn {
   order: { name: string, count: number }
   orderDetails: Order[];
+  onAdd: () => void;
 }
 
-const OrderBtn:React.FC<OrderBtn> = ({order, orderDetails}) => {
+const OrderBtn:React.FC<OrderBtn> = ({order, orderDetails, onAdd}) => {
   const orderDetail = orderDetails.find(ord => ord.name === order.name);
 
   if (!orderDetail) {
@@ -14,7 +15,7 @@ const OrderBtn:React.FC<OrderBtn> = ({order, orderDetails}) => {
   }
   return (
     <div>
-      <button>
+      <button onClick={onAdd}>
         <img src={orderDetail.image} alt={orderDetail.name} style={{width: "70px"}}/>
         <span>{orderDetail.name}</span>
         <span>Price: {orderDetail.price}</span>

@@ -5,8 +5,9 @@ import OrderBtn from '../OrderBtn/OrderBtn';
 interface OrderPanelProps {
   orders: { name: string; count: number }[];
   orderDetails: Order[];
+  onAdd: (name: string) => void;
 }
-const OrderPanel:React.FC<OrderPanelProps> = ({ orders, orderDetails}) => {
+const OrderPanel:React.FC<OrderPanelProps> = ({ orders, orderDetails, onAdd}) => {
   return (
     <div>
       {orders.map((order) => (
@@ -14,6 +15,7 @@ const OrderPanel:React.FC<OrderPanelProps> = ({ orders, orderDetails}) => {
           <OrderBtn
             order={order}
             orderDetails={orderDetails}
+            onAdd={() => onAdd(order.name)}
           />
         </div>
       ))}
